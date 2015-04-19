@@ -1,0 +1,23 @@
+{
+  "name": "taco-deploy-mongroup",
+  "version": "1.0.0",
+  "description": "updates your mongroup configuration for you and then (re)starts your process",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maxogden/taco-deploy-mongroup.git"
+  },
+  "keywords": [
+    "taco",
+    "deploy"
+  ],
+  "author": "max ogden",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/maxogden/taco-deploy-mongroup/issues"
+  },
+  "homepage": "https://github.com/maxogden/taco-deploy-mongroup"
+}
