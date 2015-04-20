@@ -8,8 +8,9 @@ module.exports = {
 
 function handleDeploy (args) {
   var dir = args._[0]
-  if (args.h) return usage()
-  var deployStream = deploy({path: dir})
+  if (!dir || args.h) return usage()
+  args.path = args
+  var deployStream = deploy(args)
   process.stdin.pipe(deployStream).pipe(process.stdout)
 
   deployStream.on('error', function (err) {

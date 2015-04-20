@@ -10,7 +10,8 @@ module.exports = {
 function handleStart (args) {
   var procName = args._[0]
   if (!procName || args.h) return usage()
-  start({name: procName, path: args.path}, function started (err, stdout, stderr) {
+  args.name = procName
+  start(args, function started (err, stdout, stderr) {
     if (err) {
       console.error(err.message)
       process.exit(1)

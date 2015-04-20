@@ -28,7 +28,33 @@ status           get the status of all processes
 Run 'taco-mon <command> -h' to view usage for a specific command
 ```
 
-Also see the `usage/` folder
+The `usage/` folder has full use for each command
+
+### `taco-mon deploy`
+
+Pipe a tarball into this and supply a path as the first argument. The tarball will be unpacked into a `versions/<name>-<timestamp>` folder in the path you specified, symlinked to `deploys/<name>`, and then `taco-mon restart` will be run for you
+
+You may pass any options for `taco-mon start` to this command
+
+### `taco-mon start`
+
+Starts a process by name. Skips if the process is already started.
+
+Options
+
+```
+--start-with              prefix the start command with a string
+--start-prefix            alias for --start-with
+--on-error                execute <cmd> on error
+--on-restart              execute <cmd> on restarts
+--sleep                   sleep seconds before re-executing [1]
+--attempts                retry attempts within 60 seconds [10]
+--prefix                  add a log prefix
+--logfile                 specify logfile [<name>.log]
+--pidfile                 write program pid to file [<name>.pid]
+--mon-pidfile             write mon pid to file [<name>.mon.pid]
+--mon                     specify a custom mon executable to use
+```
 
 ## example
 

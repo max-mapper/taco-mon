@@ -1,9 +1,10 @@
 Usage: taco-mon deploy <deploy-to-path>
 
-Deploy a tarball (e.g. from taco-pack or taco-build) into a directory, and then (re)start the application.
+Deploy a program tarball (e.g. from taco-pack or taco-build) into a directory,
+then runs `taco-mon stop` and `taco-mon start` in the program.
 
-You should write the tarball data to STDIN.
-
-You must specify the target path as the first argument.
+You should write the tarball data to STDIN and specify the target path as the first argument.
 
 Example: $ cat myapp.tar | taco-mon deploy .
+
+See `taco-mon start -h` for the full list of start options.
