@@ -17,7 +17,14 @@ function handleStatus (args) {
       process.exit(1)
     }
     procs.forEach(function (proc) {
-      console.log(proc)
+      var status = ""
+      if (proc.alive) status += 'alive'
+      else status += 'dead'
+        
+      if (proc.alive) status += ', started ' + relativeDate(proc.started)
+      
+      if (args.json) console.log(JSON.stringify(proc))
+      else console.log(proc.name + ':', status)
     })
   })
 }
