@@ -1,0 +1,3 @@
+Usage: taco-mon link <path>
+
+Symlinks a folder into ./deploys/<name> so it can be started using taco-mon start <name>

@@ -9,7 +9,8 @@ var config = {
     require('./bin/status.js'),
     require('./bin/start.js'),
     require('./bin/stop.js'),
-    require('./bin/restart.js')
+    require('./bin/restart.js'),
+    require('./bin/link.js')
   ],
   defaults: require('./bin/defaults.js'),
   none: noMatch
