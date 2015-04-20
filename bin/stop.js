@@ -9,7 +9,7 @@ module.exports = {
 
 function handleStop (args) {
   var procName = args._[0]
-  if (!procName) return usage()
+  if (!procName || args.h) return usage()
   stop({name: procName, path: args.path}, function stopped (err, stdout, stderr) {
     if (err) {
       if (err.code && err.code === 'ENOENT') console.error('Process was already killed')

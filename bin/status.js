@@ -18,8 +18,8 @@ function handleStatus (args) {
     }
     procs.forEach(function (proc) {
       var status = ""
-      if (proc.alive) status += 'alive'
-      else status += 'dead'
+      if (proc.alive) status += 'running'
+      else status += 'not running'
         
       if (proc.alive) status += ', started ' + relativeDate(proc.started)
       

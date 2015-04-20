@@ -9,7 +9,7 @@ module.exports = {
 
 function handleRestart (args) {
   var procName = args._[0]
-  if (!procName) return usage()
+  if (!procName || args.h) return usage()
   restart({name: procName, path: args.path}, function (err, stdout, stderr) {
     if (err) {
       console.error(err.message)
