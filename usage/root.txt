@@ -7,5 +7,6 @@ stop             stop a process by name
 restart          stop and start a process by name
 deploy           deploy a new process from a tarball
 status           get the status of all processes
+link             symlink an external program into the taco deploys folder
 
 Run 'taco-mon <command> -h' to view usage for a specific command
