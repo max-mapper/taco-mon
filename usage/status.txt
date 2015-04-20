@@ -1,1 +1,3 @@
-status
+Usage: taco-mon status
+
+Prints out the status of all processes, whether they are running or not

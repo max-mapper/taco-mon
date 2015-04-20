@@ -1,1 +1,3 @@
-restarts
+Usage: taco-mon restart <name>
+
+Stops and then starts process by name. Will start if the process is not started.

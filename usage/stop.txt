@@ -1,1 +1,3 @@
-stop
+Usage: taco-mon stop <name>
+
+Stops a process by name. Lets you know if the process was already stopped.

@@ -1,1 +1,3 @@
-start
+Usage: taco-mon start <name>
+
+Starts a process by name. Skips if the process is already started.

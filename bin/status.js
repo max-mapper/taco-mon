@@ -12,7 +12,8 @@ function handleStatus (args) {
   if (args.h) return usage()
   status(args, function (err, procs) {
     if (err) {
-      console.error(err.message)
+      if (err.code === 'ENOENT') console.error('Error: Could not find any taco process folders at this path')
+      else console.error(err.message)
       process.exit(1)
     }
     procs.forEach(function (proc) {

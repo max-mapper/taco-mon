@@ -1,3 +1,4 @@
+var usage = require('../usage.js')('deploy.txt')
 var deploy = require('../lib/deploy.js')
 
 module.exports = {
@@ -7,6 +8,7 @@ module.exports = {
 
 function handleDeploy (args) {
   var dir = args._[0]
+  if (args.h) return usage()
   var deployStream = deploy({path: dir})
   process.stdin.pipe(deployStream).pipe(process.stdout)
 
@@ -19,4 +21,3 @@ function handleDeploy (args) {
     console.error('Finished deploying')
   })
 }
-  
