@@ -1,0 +1,3 @@
+Usage: taco-mon clean
+
+Removes all extracted tarballs from ./versions that aren't currently linked to by ./deploys
