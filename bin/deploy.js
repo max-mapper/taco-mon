@@ -9,7 +9,7 @@ module.exports = {
 function handleDeploy (args) {
   var dir = args._[0]
   if (!dir || args.h) return usage()
-  args.path = args
+  args.path = dir
   var deployStream = deploy(args)
   process.stdin.pipe(deployStream).pipe(process.stdout)
 
