@@ -1,6 +1,6 @@
 {
   "name": "taco-mon",
-  "version": "1.3.0",
+  "version": "2.0.0",
   "description": "a process monitor and deployment tool based on the mon(1) C process monitor",
   "main": "index.js",
   "scripts": {
